@@ -1,0 +1,23 @@
+1.restful api格式:
+	curl -X<REST Verb> <Node>:<Port>/<Index>/<Type>/<ID>
+	<REST Verb>的取值  GET,PUT,DELETE,POST
+
+	样例:
+	curl -XPUT 'localhost:9200/customer'
+	curl -XPUT 'localhost:9200/customer/external/1' -d '
+	{
+	  "name": "John Doe"
+	}'
+	curl 'localhost:9200/customer/external/1'
+	curl -XDELETE 'localhost:9200/customer'
+
+
+
+	curl -XPUT 'localhost:9200/customer/external/1?pretty' -d '{"name": "John Doe"}'
+	其中 customer为索引名称, external为索引类型, 1为ID   -d 后面为json格式的字符串
+
+2.es 导入json文件
+	以导入accounts.json为例
+	curl -XPOST 'localhost:9200/bank/account/_bulk?pretty' --data-binary "@accounts.json"
+	curl 'localhost:9200/_cat/indices?v'
+

@@ -1,0 +1,41 @@
+# The # character at the beginning of a line indicates a comment. Use
+# comments to describe your configuration.
+input {
+	stdin { }
+
+
+    file {
+        path => "/Users/fredlee/Documents/elk/hrb_yinlianqianzhi.log"
+        start_position => beginning
+        sincedb_path => "/Users/fredlee/Documents/elk/.sincedb"
+    }
+}
+
+# The filter part of this file is commented out to indicate that it is
+# optional.
+
+filter {
+  grok {
+       # match => {"message" => "%{WORD:content}"}
+#	match => {"message" => "%{IP:client} %{WORD:method} %{URIPATHPARAM:request} %{NUMBER:bytes} %{NUMBER:duration}"}
+       # add_field => {
+       #         "%{content}" => "hello, from %{host}"
+       # }
+	patterns_dir => "./patterns"
+	#match => { "message" => "%{WRITE_TIMESTAMP:write_timestamp}\|dir:%{WORD:dir}\|clientIP:%{IP:clientIP}\|serverIP:%{IP:serverIP}\|transType:%{NUMBER:transType}"}
+	match => { "message" => "%{WRITE_TIMESTAMP:write_timestamp}\|dir:%{WORD:dir}\|clientIP:%{IP:clientIP}\|serverIP:%{IP:serverIP}\|transType:%{NUMBER:transType}\|retCode:%{NUMBER:retCode}\|respTime:%{NUMBER:respTime:int}\|cardNo:%{NUMBER:cardNo}\|tranTime:%{NUMBER:tranTime}\|detail:"}
+	#match => { "message" => "%{SYSLOGTIMESTAMP:my_timestamp}"}
+  }
+}
+
+output{
+	file {
+    	path => "/Users/fredlee/Documents/elk/xxx.txt"
+	}
+
+	elasticsearch {
+			  host => localhost
+              protocol => "http"
+    }
+	stdout {codec => rubydebug}
+}

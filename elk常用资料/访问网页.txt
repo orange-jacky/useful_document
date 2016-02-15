@@ -1,0 +1,83 @@
+
+Kibana 4.1.1
+	Visit 
+	http://localhost:5601
+
+	bin/kibana启动失败
+	到config目录下修改kibana.yml
+		host: "localhost"
+
+		kibana_elasticsearch_username: es_admin
+		kibana_elasticsearch_password: es_admin	
+
+		这里的es_admin要和下面的密码一致
+
+elasticsearch-1.7.1
+	visit 
+	http://localhost:9200
+	http://localhost:9200/_plugin/head/ 
+
+	安装head插件
+	bin/plugin -install mobz/elasticsearch-head
+
+
+ 	Use the Cluster Health API [http://localhost:9200/_cluster/health], the
+	Node Info API [http://localhost:9200/_nodes] or GUI tools
+	Use the Index Status API (<http://localhost:9200/A/_status>
+
+
+	用户名和密码:es_admin
+	添加用户:
+	elasticsearch-1.7.1/bin/shield
+	执行./esusers useradd  es_admin -r admin
+
+
+
+logstash-1.5.3
+
+	监测配置文件
+ 	bin/logstash -f conf/sample.conf  --configtest
+
+ 	查看安装了哪些插件
+	bin/plugin list 
+
+	安装插件
+	bin/plugin install logstash-output-kafka
+
+
+	卸载插件
+	bin/plugin uninstall logstash-output-kafka
+
+	删除索引
+	curl -XDELETE 'http://localhost:9200/logstash-2015.08.12/'
+	其中logstash-2015.08.12为索引名称
+
+
+	错误提示:
+ 	org.elasticsearch.discovery.zen.ping.unicast.UnicastZenPing$4 handleException
+	java.lang.ClassNotFoundException: org.elasticsearch.shield.authc.AuthenticationException
+
+	解决办法:
+	到es的plugin目录下删除shield,marvel目录,重启es,logstash
+
+
+	启动logstash后,错误提示
+	Failed to install template: waited for [30s] {:level=>:error}
+
+
+
+
+ruby gem安装程序
+
+	错误提示:
+	macbookpro:bin fredlee$ gem install bundler
+	ERROR:  Could not find a valid gem 'bundler' (>= 0), here is why:
+         	 Unable to download data from https://rubygems.org/ - Errno::ETIMEDOUT: Operation timed out - connect(2) (https://rubygems.org/latest_specs.4.8.gz)
+
+    解决办法:
+    	是因为gem默认使用https 加密方式 下载数据(gem env  查看source变量的值)
+
+    	启动goagent代理,从代理安装
+ 		sudo gem install --http-proxy http://127.0.0.1:8087  bundler
+
+
