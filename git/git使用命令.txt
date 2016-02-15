@@ -1,0 +1,39 @@
+1.回退
+	1.1 已从本地提交到远程仓库
+		回退本地仓库
+		git log
+		git reset --hard commit_id
+		回退远程仓库
+		git push origin master --force  
+
+	1.2 提交了本地仓库,没有提交到远程仓库
+		git log
+		git reset --soft commit_id
+
+2.提交
+	2.1 提交时指定是谁提交的
+		git commit --author="your-name <youremail>" -m "desc"
+		eg: git commit --author="lxm <lixm@133.cn>" -m "first commit"
+
+3.git pull 冲突
+	3.1 从远程仓库下载最新内容时遇到冲突
+		git stash
+		git pull
+		git stash pop stash@{0}
+
+4.放弃本地库的修改
+	git checkout .
+5.本地库提交文件
+	5.1提交某个文件
+		git status 查看文件
+		git add  文件
+	5.2提交所有文件
+		git add .
+
+6.查看提交日志
+	git log
+
+7.同步remote库 到本地库
+	git pull
+8.同步本地库到remote库
+	git push
