@@ -1,0 +1,19 @@
+Sat, 18 May 2013 11:46:00 -0700
+socket/ancdata.c	Sat, 18 May 2013 11:06:18 -0700
+socket/basicsocket.c	Sat, 18 May 2013 11:06:18 -0700
+socket/constants.c	Sat, 18 May 2013 11:06:18 -0700
+socket/getaddrinfo.c	Sat, 18 May 2013 11:06:18 -0700
+socket/getnameinfo.c	Sat, 18 May 2013 11:06:18 -0700
+socket/init.c	Sat, 18 May 2013 11:06:18 -0700
+socket/ipsocket.c	Sat, 18 May 2013 11:06:18 -0700
+socket/lib/socket.rb	Sat, 18 May 2013 11:06:18 -0700
+socket/mkconstants.rb	Sat, 18 May 2013 11:06:18 -0700
+socket/option.c	Sat, 18 May 2013 11:06:18 -0700
+socket/raddrinfo.c	Sat, 18 May 2013 11:06:18 -0700
+socket/socket.c	Sat, 18 May 2013 11:06:18 -0700
+socket/sockssocket.c	Sat, 18 May 2013 11:06:18 -0700
+socket/tcpserver.c	Sat, 18 May 2013 11:06:18 -0700
+socket/tcpsocket.c	Sat, 18 May 2013 11:06:18 -0700
+socket/udpsocket.c	Sat, 18 May 2013 11:06:18 -0700
+socket/unixserver.c	Sat, 18 May 2013 11:06:18 -0700
+socket/unixsocket.c	Sat, 18 May 2013 11:06:18 -0700

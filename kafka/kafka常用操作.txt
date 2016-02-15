@@ -1,0 +1,25 @@
+ 先cd 到kafka目录下,然后再操作
+
+ 先启动zookeeper
+ bin/zookeeper-server-start.sh config/zookeeper.properties
+
+ 再启动kafka
+ bin/kafka-server-start.sh config/server.properties
+
+
+
+
+ 创建一个topic
+ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+ 
+ 从一个topic取信息
+ bin/kafka-console-consumer.sh --zookeeper localhost:2181 --from-beginning --topic test
+
+ 查看有哪些topic
+ bin/kafka-topics.sh --list --zookeeper localhost:2181 
+
+ 查看topic的描述
+ bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test
+
+ 删除一个topic
+ bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic test	

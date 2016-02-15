@@ -1,0 +1,27 @@
+Tue, 05 Feb 2013 23:27:50 -0700
+syck/bytecode.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/emitter.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/gram.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/handler.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/implicit.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/baseemitter.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/basenode.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/constants.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/encoding.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/error.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/loader.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/rubytypes.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/stream.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/stringio.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/syck.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/tag.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/types.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/yamlnode.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck/ypath.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/syck.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/lib/yaml/syck.rb	Tue, 05 Feb 2013 18:46:40 -0700
+syck/node.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/rubyext.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/syck.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/token.c	Tue, 05 Feb 2013 18:46:40 -0700
+syck/yaml2byte.c	Tue, 05 Feb 2013 18:46:40 -0700

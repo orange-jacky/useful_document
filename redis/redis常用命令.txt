@@ -1,0 +1,13 @@
+1.redis 默认的db有16个  0-15
+	切换db,select index  
+	eg:select 0
+2.查看所有keys
+	登陆redis-cli,执行
+	keys *
+3.查看redis服务统计信息
+	可以查看keys数量,使用内存总量,redis的部署方式
+	info
+4.清空某个db
+	比如清空db3
+	select 3
+	flushdb
